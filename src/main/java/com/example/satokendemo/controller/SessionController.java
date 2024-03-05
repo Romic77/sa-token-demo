@@ -37,6 +37,7 @@ public class SessionController {
 
     @GetMapping("/getSessionList/{id}")
     public SaResult getSessionList(@PathVariable Long id){
+        //获取指定账号id的所有session
         return SaResult.data(StpUtil.getSessionByLoginId(id));
     }
 }
